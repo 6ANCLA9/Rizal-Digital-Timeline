@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rizal: The Shaping of a Hero — Life, Works & Character</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:       #ffffff;
+  --bg2:      #f8f6f2;
+  --bg3:      #f0ece4;
+  --ink:      #1a1410;
+  --ink2:     #3d342a;
+  --ink3:     #6b5d4f;
+  --ink4:     #9e8e7e;
+  --gold:     #b8860b;
+  --gold2:    #8b6508;
+  --red:      #8b1a1a;
+  --border:   #e0d8cc;
+  --nav-h:    60px;
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Source Sans 3',sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.8;
+}
+
+/* ── STICKY NAV ── */
+.site-nav{
+  position:sticky;top:0;z-index:100;
+  background:#1a1410;
+  height:var(--nav-h);
+  display:flex;align-items:center;
+  padding:0 2rem;
+  gap:2rem;
+  box-shadow:0 2px 12px rgba(0,0,0,0.4);
+}
+.site-title{
+  font-family:'Lora',serif;font-size:1rem;font-weight:700;
+  color:#e8d9b0;letter-spacing:0.04em;white-space:nowrap;
+  margin-right:auto;
+}
+.nav-links{display:flex;gap:1.5rem;list-style:none;}
+.nav-links a{
+  font-size:0.82rem;color:rgba(232,217,176,0.65);
+  text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;
+  transition:color 0.2s;
+}
+.nav-links a:hover,.nav-links a.active{color:#e8d9b0;}
+
+/* ── HERO BANNER ── */
+.hero{
+  position:relative;
+  background:#1a1410;
+  height:520px;
+  display:flex;align-items:flex-end;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url('https://rizalnetherlands.wordpress.com/wp-content/uploads/2013/06/rizal.png?w=584');
+  background-size:cover;background-position:center top;
+  opacity:0.25;
+  filter:sepia(60%);
+}
+.hero-gradient{
+  position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(26,20,16,0.97) 0%, rgba(26,20,16,0.5) 60%, transparent 100%);
+}
+.hero-content{
+  position:relative;z-index:2;
+  width:100%;max-width:780px;
+  margin:0 auto;
+  padding:0 2rem 3rem;
+}
+.hero-tag{
+  font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.75rem;
+}
+.hero-title{
+  font-family:'Lora',serif;
+  font-size:clamp(2rem,5vw,3.4rem);
+  font-weight:700;color:#f0e4c8;
+  line-height:1.1;margin-bottom:0.5rem;
+}
+.hero-sub{
+  font-size:1.05rem;color:rgba(240,228,200,0.6);
+  font-style:italic;font-weight:300;
+}
+
+/* ── LAYOUT ── */
+.page-wrap{max-width:780px;margin:0 auto;padding:0 2rem;}
+
+/* ── SECTION HEADERS ── */
+.section-block{padding:3.5rem 0 0;}
+.section-label{
+  font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.5rem;font-weight:600;
+}
+.section-title{
+  font-family:'Lora',serif;
+  font-size:clamp(1.5rem,3vw,2rem);
+  font-weight:700;color:var(--ink);
+  margin-bottom:1.25rem;padding-bottom:0.75rem;
+  border-bottom:2px solid var(--border);
+  line-height:1.25;
+}
+.section-intro{
+  font-family:'Lora',serif;font-size:1.1rem;
+  color:var(--ink2);font-style:italic;
+  margin-bottom:1.5rem;line-height:1.75;
+}
+
+/* ── PROSE ── */
+p{
+  margin-bottom:1.25rem;
+  color:var(--ink2);line-height:1.85;
+}
+strong{color:var(--ink);font-weight:600;}
+em{color:var(--ink2);}
+
+/* ── PULL QUOTE ── */
+.pull-quote{
+  margin:2rem 0;
+  padding:1.5rem 2rem;
+  border-left:4px solid var(--gold);
+  background:var(--bg2);
+  border-radius:0 8px 8px 0;
+}
+.pull-quote p{
+  font-family:'Lora',serif;font-size:1.15rem;
+  font-style:italic;color:var(--ink);
+  margin:0;line-height:1.7;
+}
+.pull-quote cite{
+  display:block;margin-top:0.5rem;
+  font-size:0.8rem;color:var(--ink3);font-style:normal;letter-spacing:0.05em;
+}
+
+/* ── IMAGES ── */
+.img-full{
+  width:100%;margin:2rem 0;
+  border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 4px 24px rgba(0,0,0,0.1);
+}
+.img-full img{
+  width:100%;display:block;
+  max-height:420px;object-fit:cover;
+  filter:sepia(10%);
+}
+.img-caption{
+  padding:0.6rem 1rem;background:var(--bg2);
+  font-size:0.78rem;color:var(--ink3);font-style:italic;
+  border-top:1px solid var(--border);text-align:center;
+}
+
+.img-pair{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1rem;margin:2rem 0;
+}
+.img-pair .img-card{
+  border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+.img-pair .img-card img{
+  width:100%;
+  height:220px;
+  object-fit:contain;      
+  background-color: #f4edd9; 
+  display:block;
+  filter:sepia(10%);
+}
+.img-pair .img-card .cap{
+  padding:0.5rem 0.75rem;background:var(--bg2);
+  font-size:0.75rem;color:var(--ink3);font-style:italic;
+  border-top:1px solid var(--border);text-align:center;
+}
+
+.img-float-right{
+  float:right;margin:0 0 1.5rem 2rem;
+  width:280px;border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 4px 16px rgba(0,0,0,0.1);
+}
+.img-float-right img{width:100%;display:block;filter:sepia(15%);}
+.img-float-right .cap{
+  padding:0.5rem 0.75rem;background:var(--bg2);
+  font-size:0.75rem;color:var(--ink3);font-style:italic;
+  border-top:1px solid var(--border);text-align:center;
+}
+.clearfix::after{content:'';display:block;clear:both;}
+
+/* ── FACT BOXES ── */
+.fact-row{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1rem;margin:2rem 0;
+}
+.fact-box{
+  background:var(--bg2);border:1px solid var(--border);
+  border-top:3px solid var(--gold);
+  border-radius:8px;padding:1.1rem;text-align:center;
+}
+.fact-num{
+  font-family:'Lora',serif;font-size:2rem;font-weight:700;
+  color:var(--gold2);display:block;
+}
+.fact-label{font-size:0.78rem;color:var(--ink3);margin-top:0.2rem;}
+
+/* ── TIMELINE STRIP ── */
+.timeline-strip{
+  margin:2.5rem 0;
+  position:relative;
+  padding-left:2rem;
+}
+.timeline-strip::before{
+  content:'';position:absolute;left:6px;top:6px;bottom:6px;
+  width:2px;background:linear-gradient(to bottom,var(--gold),var(--gold2));
+}
+.t-item{
+  position:relative;margin-bottom:1.5rem;
+}
+.t-dot{
+  position:absolute;left:-2.1rem;top:6px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--gold);border:2px solid var(--bg);
+  box-shadow:0 0 0 1.5px var(--gold);
+}
+.t-year{
+  font-size:0.72rem;font-weight:600;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--gold2);
+  margin-bottom:2px;
+}
+.t-title{
+  font-family:'Lora',serif;font-size:1rem;font-weight:700;
+  color:var(--ink);margin-bottom:0.3rem;
+}
+.t-body{font-size:0.9rem;color:var(--ink2);line-height:1.7;}
+
+/* ── GALLERY ── */
+.gallery-section{
+  background:var(--bg2);
+  margin:3rem -2rem 0;
+  padding:3rem 2rem;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.gallery-section .section-title{font-size:1.5rem;}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:1rem;margin-top:1.5rem;
+}
+.gal-card{
+  border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--bg);
+  box-shadow:0 2px 8px rgba(0,0,0,0.07);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.gal-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,0.12);}
+.gal-card img{
+  width:100%;height:160px;object-fit:cover;display:block;
+  filter:sepia(15%) contrast(1.05);
+}
+.gal-card .gal-cap{
+  padding:0.5rem 0.75rem;font-size:0.75rem;
+  color:var(--ink3);font-style:italic;text-align:center;
+}
+
+/* ── VIDEO ── */
+.video-section{padding:3rem 0;}
+.video-section .section-title{font-size:1.5rem;}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem;}
+.video-wrap{
+  border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 3px 16px rgba(0,0,0,0.1);
+  aspect-ratio:16/9;
+}
+.video-wrap iframe{width:100%;height:100%;border:0;display:block;}
+
+/* ── ANALYSIS CARDS ── */
+.analysis-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1rem;margin:2rem 0;
+}
+.analysis-card{
+  border:1px solid var(--border);border-radius:8px;
+  padding:1.25rem;background:var(--bg);
+}
+.analysis-card.green{border-top:3px solid #2d6a2d;}
+.analysis-card.red  {border-top:3px solid var(--red);}
+.analysis-card.gold {border-top:3px solid var(--gold);grid-column:1/-1;}
+.ac-label{
+  font-size:0.68rem;font-weight:600;letter-spacing:0.1em;
+  text-transform:uppercase;margin-bottom:0.7rem;
+}
+.green .ac-label{color:#2d6a2d;}
+.red   .ac-label{color:var(--red);}
+.gold  .ac-label{color:var(--gold2);}
+.ac-item{
+  font-size:0.88rem;color:var(--ink2);line-height:1.6;
+  margin-bottom:0.4rem;padding-left:0.9rem;
+  border-left:1px solid var(--border);
+}
+
+/* ── DIVIDER ── */
+.divider{
+  margin:2.5rem 0;
+  display:flex;align-items:center;gap:1rem;
+}
+.divider::before,.divider::after{
+  content:'';flex:1;height:1px;background:var(--border);
+}
+.divider span{
+  font-size:1.2rem;color:var(--gold);opacity:0.6;
+  letter-spacing:0.5rem;
+}
+
+/* ── REFERENCES ── */
+.ref-section{
+  background:var(--bg2);margin:3rem 0 0;
+  padding:2.5rem;border-radius:8px;
+  border:1px solid var(--border);
+}
+.ref-title{
+  font-family:'Lora',serif;font-size:1.1rem;font-weight:700;
+  color:var(--ink);margin-bottom:1rem;
+  padding-bottom:0.5rem;border-bottom:1px solid var(--border);
+}
+.ref-list{list-style:none;padding:0;}
+.ref-list li{
+  font-size:0.82rem;color:var(--ink2);line-height:1.7;
+  margin-bottom:0.4rem;padding-left:1.2rem;position:relative;
+}
+.ref-list li::before{content:'›';position:absolute;left:0;color:var(--gold);}
+
+/* ── FOOTER ── */
+.site-footer{
+  background:#1a1410;margin-top:4rem;
+  padding:2rem;text-align:center;
+  font-size:0.78rem;color:rgba(232,217,176,0.4);
+}
+.site-footer a{color:rgba(232,217,176,0.5);text-decoration:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .hero{height:380px;}
+  .img-pair,.fact-row,.analysis-grid,.video-grid{grid-template-columns:1fr;}
+  .analysis-card.gold{grid-column:1;}
+  .img-float-right{float:none;width:100%;margin:0 0 1.5rem;}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .page-wrap{padding:0 1.1rem;}
+  .gallery-section{margin:3rem -1.1rem 0;padding:2rem 1.1rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="site-title">RIZAL: THE SHAPING OF A HERO</div>
+  <ul class="nav-links">
+    <li><a href="#intro" class="active">Home</a></li>
+    <li><a href="#family">Family</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#works">Works</a></li>
+    <li><a href="#abroad">Abroad</a></li>
+    <li><a href="#exile">Exile & Death</a></li>
+    <li><a href="#character">Character</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-content">
+    <div class="hero-tag">SS038 M2 SA</div>
+    <div class="hero-title">Rizal: The Shaping of a Hero</div>
+    <div class="hero-sub">By: Kent Zoren C. Ancla | A322</div>
+  </div>
+</div>
+
+<!-- INTRO -->
+<div class="page-wrap">
+  <div class="section-block" id="intro">
+    <div class="section-label">Introduction</div>
+    <div class="section-title">José Rizal: The Philippines' Remarkable Hero</div>
+
+    <div class="img-float-right">
+      <img src="data:image/jpeg;base64,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"
+           alt="José Rizal portrait c. 1890"
+           onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Jose_rizal_full_body.jpg/320px-Jose_rizal_full_body.jpg'">
+      <div class="cap">Dr. José Rizal, c. 1890<br>Source: <a href="https://en.wikipedia.org/wiki/José_Rizal">https://en.wikipedia.org/wiki/José_Rizal</a></div>
+    </div>
+
+    <div class="clearfix">
+      <p>When we hear the name of Dr. José Rizal, the first thing that comes to mind is that he is our national hero — a hero who fought for our country's independence not with a sword, but with a pen. His novels became the eye-openers that awakened Filipinos to fight for the freedom that had been robbed by centuries of Spanish colonization. Rizal became an unforgettable figure in Philippine history, and it is only right for the younger generation to know him better.</p>
+
+      <p>Through this blog post, we will look closely at the life, works, and writings of José Rizal — examining the biological factors inherited from his family, the environmental forces that shaped his consciousness, the transformative experiences he had at home and abroad, and the remarkable character that emerged from it all.</p>
+
+      <div class="pull-quote">
+        <p>"The youth is the hope of our fatherland."</p>
+        <cite>— Dr. José Rizal</cite>
+      </div>
+
+      <div class="fact-row">
+        <div class="fact-box">
+          <span class="fact-num">1861</span>
+          <div class="fact-label">Born in Calamba, Laguna</div>
+        </div>
+        <div class="fact-box">
+          <span class="fact-num">22+</span>
+          <div class="fact-label">Languages mastered</div>
+        </div>
+        <div class="fact-box">
+          <span class="fact-num">35</span>
+          <div class="fact-label">Years of a heroic life</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BIOLOGICAL FACTORS -->
+  <div class="divider"><span>✦ ✦ ✦</span></div>
+  <div class="section-block" id="bio">
+    <div class="section-label">II. Biological Factors</div>
+    <div class="section-title">Inherited Traits &amp; Physical Characteristics</div>
+    <div class="section-intro">The genius of Rizal did not emerge in a vacuum — it was rooted deeply in his bloodline and physical constitution.</div>
+
+    <p>Dr. José Protacio Rizal Mercado y Alonso Realonda was of mixed Tagalog, Chinese, Spanish, and Japanese ancestry — a cosmopolitan genetic heritage that contributed to his unusually broad intellectual range. From his mother, <strong>Teodora Alonso</strong>, he inherited an extraordinary capacity for language and learning. Teodora was herself a woman of remarkable education: a mathematician, poet, natural scientist, and linguist in her own right. From his father, <strong>Francisco Mercado</strong>, Rizal inherited practicality, discipline, and an entrepreneurial spirit.</p>
+
+    <p>Physically, Rizal stood at approximately 4'11" (150 cm) — small in stature, but this only sharpened his awareness of how colonial society used physical characteristics to impose hierarchies and humiliate Filipinos. Rather than being diminished by it, he transformed that awareness into the moral indignation that powered his writing. He was also a gifted athlete: an accomplished fencer, swimmer, gymnast, and marksman who refused to allow his size to define his capabilities.</p>
+
+    <div class="img-pair">
+      <div class="img-card">
+        <img src="data:image/jpeg;base64,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"
+             alt="Teodora Alonso, Rizal's mother"
+             onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jose_rizal_01.jpg/220px-Jose_rizal_01.jpg'">
+        <div class="cap">Teodora Alonso — Rizal's mother, his first teacher<br>Source: <a href="https://philippineculturaleducation.com.ph/alonso-teodora/">https://philippineculturaleducation.com.ph/alonso-teodora/</a></div>
+      </div>
+      <div class="img-card">
+        <img src="data:image/jpeg;base64,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"
+             alt="Francisco Mercado, Rizal's father"
+             onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jose_rizal_01.jpg/220px-Jose_rizal_01.jpg'">
+        <div class="cap">Francisco Mercado — Rizal's father, a model of discipline<br>Source: <a href="https://bayaningbayan.weebly.com/pamilya.html">https://bayaningbayan.weebly.com/pamilya.html</a></div>
+      </div>
+    </div>
+
+    <p>Perhaps most significantly, Rizal inherited an exceptional gift for fine motor control — excelling in sculpture, oil painting, and the delicate microsurgery that ophthalmology demands. His mother's deteriorating eyesight was a direct biological catalyst: her failing vision moved him to specialize in ophthalmology, transforming personal love into professional vocation. The decision would ultimately restore her sight.</p>
+  </div>
+
+  <!-- FAMILY & EARLY CHILDHOOD -->
+  <div class="divider"><span>✦ ✦ ✦</span></div>
+  <div class="section-block" id="family">
+    <div class="section-label">III. Environmental Factors — Family Background</div>
+    <div class="section-title">Family and Early Childhood</div>
+    <div class="section-intro">Rizal's character was built long before he ever set foot in a classroom. It was built at the family table.</div>
+
+    <p>Rizal was born on <strong>June 19, 1861</strong>, in Calamba, Laguna, the seventh of eleven children in one of the most respected families in the province. His father Francisco managed a hacienda and was a man of education, having studied Latin and Philosophy. The household breathed an atmosphere of learning, moral seriousness, and civic pride that was unusual for the time.</p>
+
+    <p>His mother, Teodora Alonso, taught him to read and write at age three — an extraordinary act of maternal investment in an era when girls were rarely educated. By age five, young José had composed his first poem. She instilled in him not only literacy but a profound religious and moral sensibility. Every evening, the family prayed the Angelus together. Rizal credited her as the most formative influence on his character.</p>
+
+    <p>His ten siblings — Saturnina, Paciano, Narcisa, Olimpia, Lucia, Maria, Concepcion, Josefa, Trinidad, and Soledad — formed a rich social world. His brother <strong>Paciano</strong> was especially influential: deeply involved in the revolutionary circles of Father Burgos and the GomBurZa, Paciano inspired young José to think of himself as a Filipino first and a subject of Spain second.</p>
+
+    <div class="pull-quote">
+      <p>"She taught me to read and to stammer out the first prayers. She showed me how a life could be lived with dignity even under the shadow of injustice."</p>
+      <cite>— Rizal, on his mother Teodora Alonso</cite>
+    </div>
+
+    <p>A pivotal early trauma came in <strong>1869</strong>, when colonial authorities imprisoned Teodora Alonso for two and a half years on fabricated charges of attempting to poison her sister-in-law. The eight-year-old Rizal watched his mother — gentle, educated, and innocent — dragged away by the colonial system. This injustice left a wound that never fully closed, and that eventually found its expression in every page he wrote.</p>
+
+    <p>As a child, Rizal loved to sketch, paint, read, and write. His tutors — Maestro Celestino, Maestro Lucas Padua, and later Leon Monroy (who taught him Spanish and Latin) — recognized an unusual mind. He was naughty and playful, too. He loved to tease his sister Olimpia, grieved deeply when his little sister Concepcion died, and challenged neighbourhood children to contests of wit and nerve. He was, in short, fully human — which makes his eventual heroism all the more remarkable.</p>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="divider"><span>✦ ✦ ✦</span></div>
+  <div class="section-block" id="education">
+    <div class="section-label">III. Environmental Factors — Education</div>
+    <div class="section-title">Higher Education and the Making of a Mind</div>
+    <div class="section-intro">From Calamba to Madrid to Heidelberg — Rizal's education was a journey across continents and ideologies.</div>
+
+    <div class="img-full">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBtFHUvHNCwEGeuq74tA0CjfDEuHa8qatyw&s"
+           alt="Ateneo Municipal de Manila, Intramuros c. 1887"
+           onerror="this.style.display='none'">
+      <div class="img-caption">Ateneo Municipal de Manila, Intramuros — where Rizal earned top honors in every subject<br>Source: <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBtFHUvHNCwEGeuq74tA0CjfDEuHa8qatyw&s">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLBtFHUvHNCwEGeuq74tA0CjfDEuHa8qatyw&s</a></div>
+    </div>
+
+    <p>At eleven years old, Rizal passed the entrance examination for <strong>Ateneo Municipal de Manila</strong>. The college registrar initially refused his admission — he was slight, pale, and a late enrollee. It took the intervention of Father Burgos to secure his place. He enrolled not under his family surname "Mercado" (which was on bad terms with the authorities due to Paciano's associations) but as "Rizal." This early act of navigating colonial bureaucracy planted the first seed of his political consciousness.</p>
+
+    <p>At Ateneo, Rizal was an "Emperor" — the title given to the most academically distinguished student in class. He graduated with highest honors in all subjects, joined the Academy of Natural Sciences and the Academy of Spanish Literature, and served as an officer of the Marian Congregation. He was not merely a student; he was already an institution.</p>
+
+    <p>He then enrolled at the <strong>University of Santo Tomás</strong> to study Philosophy and Letters, then shifted to Medicine — driven by the desire to heal his mother's failing eyes. UST, under Dominican administration, was a different experience: openly discriminatory toward Filipino students, intellectually conservative, and dismissive of the kind of bold thinking Rizal had developed at Ateneo. He grew restless. Meanwhile, his attention was not exclusively academic; he fell in love successively with Segunda Katigbak, Leonor Valenzuela, and <strong>Leonor Rivera</strong> — the great love of his life.</p>
+
+    <p>In <strong>1882</strong>, he secretly left for Spain, completing his Licentiate in Medicine and his Licenciado en Filosofía y Letras from the <strong>Universidad Central de Madrid</strong> — both with highest distinction. He then specialized in ophthalmology under Dr. Louis de Wecker in Paris and Dr. Otto Becker at the University of Heidelberg. By the time he returned to Asia, he was among the most comprehensively educated Filipinos in history.</p>
+
+    <div class="fact-row">
+      <div class="fact-box">
+        <span class="fact-num">2</span>
+        <div class="fact-label">University degrees from Madrid</div>
+      </div>
+      <div class="fact-box">
+        <span class="fact-num">4</span>
+        <div class="fact-label">Countries studied in</div>
+      </div>
+      <div class="fact-box">
+        <span class="fact-num">22+</span>
+        <div class="fact-label">Languages mastered</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LITERARY WORKS -->
+  <div class="divider"><span>✦ ✦ ✦</span></div>
+  <div class="section-block" id="works">
+    <div class="section-label">IV. Life Experiences — Literary Works</div>
+    <div class="section-title">The Works That Changed a Nation</div>
+    <div class="section-intro">Rizal's pen was his most powerful weapon — and the Spanish colonial government knew it.</div>
+
+    <p>Rizal's literary output was vast and varied. Before his landmark novels, he was already a poet of distinction. His early poems include <em>Mi Primera Inspiracion</em> (for his mother's birthday), <em>Un Recuerdo de Mi Pueblo</em> (a tribute to Calamba), and devotional works on religion and education such as <em>Al Niño Jesus</em> and <em>Por La Educacion Recibe Lustre la Patria</em>. His contest-winning poem <em>A La Juventud Filipina</em> — "To the Filipino Youth" — proclaimed that the young generation was the hope of the nation and remains one of the most celebrated poems in Philippine literature.</p>
+
+    <div class="img-pair">
+      <div class="img-card">
+        <img src="https://eyeofthetiger25.wordpress.com/wp-content/uploads/2016/02/2012b-noli_me_tangere.jpg?w=223"
+             alt="Noli Me Tangere original 1887 cover"
+             onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jose_rizal_01.jpg/220px-Jose_rizal_01.jpg'">
+        <div class="cap">Noli Me Tángere — original Berlin edition, 1887<br>Source: <a href="https://eyeofthetiger25.wordpress.com/noli-me-tangere/">https://eyeofthetiger25.wordpress.com/noli-me-tangere/</a></div>
+      </div>
+      <div class="img-card">
+        <img src="data:image/jpeg;base64,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"
+             alt="El Filibusterismo original 1891 cover"
+             onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jose_rizal_01.jpg/220px-Jose_rizal_01.jpg'">
+        <div class="cap">El Filibusterismo — original Ghent edition, 1891<br>Source: <a href="https://www.sutori.com/en/story/el-filibusterismo-timeline--HRjdQdx2JMdiSMsW2a4MvvZB">https://www.sutori.com/en/story/el-filibusterismo-timeline--HRjdQdx2JMdiSMsW2a4MvvZB</a></div>
+      </div>
+    </div>
+
+    <p><strong>Noli Me Tángere</strong> (Touch Me Not), published in Berlin in <strong>1887</strong>, is Rizal's most powerful literary achievement. Through the story of Crisostomo Ibarra, it exposed the brutal injustices of colonial Spanish rule — the corruption of the friar orders, the exploitation of Filipino peasants, the systematic humiliation of the "Indios." The novel was not merely protest literature; it was a mirror held up to Philippine society with devastating clarity. Its publication was an act of extraordinary moral courage.</p>
+
+    <p><strong>El Filibusterismo</strong> (The Subversive), published in Ghent in <strong>1891</strong>, was darker and more radical. Where Noli depicted the hope of peaceful reform, El Fili — through the bitter, vengeful figure of Simoun — explored what happens when that hope is extinguished. It was a warning: that a people pushed too far will seek more drastic remedies. The Spanish colonial government recognized the novel as a direct threat and moved aggressively to suppress it and destroy its author.</p>
+
+    <div class="pull-quote">
+      <p>"I want to show to those who deny us our patriotism... that we know how to die for our duty and our convictions."</p>
+      <cite>— Rizal, dedicating El Filibusterismo to the GomBurZa</cite>
+    </div>
+  </div>
+
+  <!-- LIFE ABROAD -->
+  <div class="divider"><span>✦ ✦ ✦</span></div>
+  <div class="section-block" id="abroad">
+    <div class="section-label">IV. Life Experiences — Travels</div>
+    <div class="section-title">Life Abroad: A World Education</div>
+    <div class="section-intro">Each country Rizal visited added a new dimension to his understanding of freedom, justice, and what the Philippines could become.</div>
+
+    <div class="timeline-strip">
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-year">1882 — Spain</div>
+        <div class="t-title">Barcelona &amp; Madrid</div>
+        <div class="t-body">Rizal arrived in Barcelona on June 16, 1882, welcomed by fellow Filipinos at Plaza de Cataluña. He wrote <em>El Amor Patrio</em> ("Love of Country") under the pen name "Laong Laan," published in the <em>Diariong Tagalog</em>. In Madrid, he completed his medical and philosophy degrees, painted, sculpted, and began writing Noli Me Tángere. He also met and fell for Consuelo Ortiga but held back out of loyalty to Leonor Rivera.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-year">1885–1886 — France &amp; Germany</div>
+        <div class="t-title">Paris &amp; Heidelberg — Ophthalmology</div>
+        <div class="t-body">In Paris, Rizal specialized in ophthalmology under the renowned Dr. Louis de Wecker and befriended Juan Luna and Félix Resurrección Hidalgo. In Germany, he worked under Dr. Otto Becker at the University Eye Hospital in Heidelberg, mastered German, and wrote the poem <em>A Las Flores de Heidelberg</em> — a homesick tribute to the Philippines. In Berlin, on March 21, 1887, <em>Noli Me Tángere</em> was published. He dedicated it to the Philippines.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-year">1888 — Japan</div>
+        <div class="t-title">Land of the Rising Sun</div>
+        <div class="t-body">Rizal was struck by Japan's cleanliness, discipline, and rapid modernization. He lived in a Spanish legation with Juan Pérez Caballero and fell in love with Seiko Usui (O Sei-San). He studied Japanese theater, martial arts, language, and culture. He eventually left Japan — and O Sei-San — for his country and his mission.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-year">1888 — United States</div>
+        <div class="t-title">Democracy and Its Contradictions</div>
+        <div class="t-body">Traveling across the United States, Rizal was impressed by the high standard of living but troubled by its contradictions: racial discrimination against Chinese and Japanese workers, the bias of the justice system toward white Americans, and the worship of money over human dignity. America showed him what democracy looked like — and also what it failed to deliver for the marginalized.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-year">1888–1889 — London</div>
+        <div class="t-title">Reclaiming Philippine History</div>
+        <div class="t-body">In London, Rizal studied at the British Museum and annotated Antonio de Morga's <em>Sucesos de las Islas Filipinas</em> — reclaiming pre-colonial Philippine history from Spanish distortion. He met Dr. Reinhold Rost, who inspired him to write for the <em>Trübner's Records</em> journal. He also founded the Kidlat Club and the Indios Bravos, and wrote prolifically for <em>La Solidaridad</em>.</div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-year">1890–1891 — Belgium</div>
+        <div class="t-title">El Filibusterismo &amp; Personal Crisis</div>
+        <div class="t-body">In Belgium, Rizal faced financial hardship and distressing news from home — the Dominican friars had imposed punishing rents on the Calamba hacienda, effectively driving his family off their land. Heartbroken, he wrote the poem <em>A Mi Musa</em>. Despite everything, he completed <em>El Filibusterismo</em> on March 29, 1891, and published it in Ghent. He also met Nellie Boustead, another romantic interest who ultimately did not convert to his faith — ending their relationship.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXILE & DEATH -->
+  <div class="divider"><span>✦ ✦ ✦</span></div>
+  <div class="section-block" id="exile">
+    <div class="section-label">IV. Life Experiences — Exile, Trial &amp; Death</div>
+    <div class="section-title">Dapitan, Trial, and the Final Act</div>
+    <div class="section-intro">In exile, Rizal's heroism found its most tangible, daily, human expression. In death, it became eternal.</div>
+
+    <div class="img-full">
+      <img src="https://mb.com.ph/uploads/imported_images/mb-mkt-neo-prod-1-uploads-2/media/6_6a951bcbd6/6_6a951bcbd6.jpg"
+           alt="Rizal in Dapitan"
+           onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jose_rizal_01.jpg/440px-Jose_rizal_01.jpg'">
+      <div class="img-caption">Rizal during his exile in Dapitan, Zamboanga del Norte (1892–1896)<br>Source: <a href="https://mb.com.ph/2023/12/29/rizal-s-life-in-exile">https://mb.com.ph/2023/12/29/rizal-s-life-in-exile</a> </div>
+    </div>
+
+    <p>In <strong>1892</strong>, Rizal returned to Manila and founded <em>La Liga Filipina</em>, a civic organization advocating unity, mutual aid, and peaceful reform. Within days of its first meeting, he was arrested and deported to <strong>Dapitan</strong>, a remote town in Zamboanga del Norte — the Spanish colonial government's answer to ideas it could not refute.</p>
+
+    <p>But exile in Dapitan revealed Rizal's deepest character. Far from being silenced, he built a school for local children — teaching them for free. He engineered an aqueduct to supply clean water to the community. He operated a free medical clinic and treated thousands of patients, many of whom had never seen a doctor. He conducted botanical and zoological field research that was formally recognized by scientific societies in Europe, resulting in the discovery of several new species. He also fell in love with <strong>Josephine Bracken</strong>, an Irish-Filipino woman who became his partner, and established a model farm and household. Dapitan was the living proof that Rizal's ideals were not merely literary — they were practical and daily.</p>
+
+    <p>When the <strong>Katipunan revolution</strong> broke out in August 1896, Rizal was already on a ship bound for Cuba — having been granted permission to serve as a military physician for Spain. He was arrested in Barcelona, returned to Manila in chains, and imprisoned in Fort Santiago. He was accused of being the mastermind of the revolution he had neither planned nor approved.</p>
+
+    <div class="pull-quote">
+      <p>"I die without seeing the dawn brighten over my native land. You, who will see it, greet it for me — do not forget those who fell during the darksome night."</p>
+      <cite>— José Rizal, <em>Mi Último Adiós</em> (My Last Farewell), December 29, 1896</cite>
+    </div>
+
+    <p>On <strong>December 26, 1896</strong>, a military court-martial found him guilty of rebellion, sedition, and illegal association — based almost entirely on his published novels. He was denied a meaningful defense. He was sentenced to death. The night before his execution, he secretly wrote his final and greatest poem, <em>Mi Último Adiós</em>, and concealed it in a lamp he gave to his family.</p>
+
+    <div class="img-full">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlyg8tZPfvtm9UuXtHgecQk3WpTh8q9JpYdw&s"
+           alt="Execution of Rizal at Bagumbayan, December 30 1896"
+           onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Jose_rizal_01.jpg/440px-Jose_rizal_01.jpg'">
+      <div class="img-caption">The execution of Dr. José Rizal at Bagumbayan, December 30, 1896</div>
+    </div>
+
+    <p>At <strong>7:03 a.m. on December 30, 1896</strong>, José Rizal was executed by firing squad at Bagumbayan (now Luneta/Rizal Park), Manila. He was 35 years old. Witnesses reported that he attempted to turn to face the squad as the volley rang out — and that as he fell, his final word was <em>"Consummatum est"</em> — "It is finished." The authorities shot him once more in the head to be certain.</p>
+
+    <p>The Spaniards believed his death would end the revolution. Instead, it became its greatest fuel. Within two years, the Malolos Congress had established the first Philippine Republic. Rizal had not lived to see it — but without him, it would not have existed.</p>
+  </div>
+
+  <!-- CHARACTER ANALYSIS -->
+  <div class="divider"><span>✦ ✦ ✦</span></div>
+  <div class="section-block" id="character">
+    <div class="section-label">V. Character Analysis</div>
+    <div class="section-title">Strengths, Weaknesses, and the Evolution of a Hero</div>
+    <div class="section-intro">Rizal was fully human — which is precisely what makes his heroism so extraordinary.</div>
+
+    <p>Rizal's character was neither saintly nor simple. He was a man of immense gifts and genuine vulnerabilities — and understanding both is essential to understanding why his life matters.</p>
+
+    <div class="analysis-grid">
+      <div class="analysis-card green">
+        <div class="ac-label">Virtues &amp; Strengths</div>
+        <div class="ac-item">Extraordinary intellectual breadth — mastered medicine, law, literature, art, sculpture, and natural science simultaneously</div>
+        <div class="ac-item">Moral courage: published works exposing colonial abuses at great personal risk</div>
+        <div class="ac-item">Deep compassion: treated patients for free, built community infrastructure in Dapitan</div>
+        <div class="ac-item">Iron discipline: produced landmark novels, scientific papers, and thousands of letters while practicing medicine full-time</div>
+        <div class="ac-item">Patriotism without hatred: sought reform through education and persuasion, not violence or vengeance</div>
+        <div class="ac-item">Profound dignity in suffering: faced exile and execution with equanimity and continued creative productivity</div>
+      </div>
+      <div class="analysis-card red">
+        <div class="ac-label">Shortcomings &amp; Weaknesses</div>
+        <div class="ac-item">Political naïveté: believed peaceful colonial reform was achievable, underestimating Spanish intransigence</div>
+        <div class="ac-item">Indecisiveness during the Revolution: his ambivalence left the Katipunan without unified moral leadership</div>
+        <div class="ac-item">Complex romantic life: relationships with Leonor Rivera, Nelly Boustead, O Sei-San caused personal turmoil</div>
+        <div class="ac-item">Ilustrado elitism: early writings sometimes overlooked the immediate material needs of the poor majority</div>
+        <div class="ac-item">Overconfidence that literature alone could reshape a colonial society entrenched over three centuries</div>
+      </div>
+      <div class="analysis-card gold">
+        <div class="ac-label">Evolution of Character Over Time</div>
+        <div class="ac-item"><strong>Childhood (1861–1872):</strong> Brilliant but sheltered — shaped by family values and first encounters with colonial injustice that ignited his moral sensibility</div>
+        <div class="ac-item"><strong>Student &amp; European years (1872–1892):</strong> Became radicalized intellectually; developed his reformist philosophy; wrote his major works; emerged as a cosmopolitan thinker</div>
+        <div class="ac-item"><strong>Return &amp; Dapitan exile (1887–1896):</strong> Grew increasingly pragmatic and humanitarian; shifted from abstract reformism to direct daily service; proved his ideals through lived action</div>
+        <div class="ac-item"><strong>Final months (1896):</strong> Achieved spiritual maturity — accepted martyrdom with deliberate, peaceful defiance; his death transformed him into the enduring conscience of the nation</div>
+      </div>
+    </div>
+
+    <p>Rizal's legacy today is not merely that of a man who died for his country. It is the legacy of a complete human being who lived fully — who loved, doubted, grieved, laughed, and created — and who chose, in the end, to face death rather than betray what he believed. In that choice lies the deepest lesson of his life: that integrity, carried to its conclusion, is its own form of heroism.</p>
+
+    <div class="pull-quote">
+      <p>"He who does not know how to look back at where he came from will not reach his destination."</p>
+      <cite>— Dr. José Rizal</cite>
+    </div>
+  </div>
+</div>
+
+  <!-- REFERENCES -->
+  <div class="ref-section">
+    <div class="ref-title">References</div>
+    <ul class="ref-list">
+      <li>Zaide, G. F. &amp; Zaide, S. M. (1999). <em>José Rizal: Life, Works and Writings of a Genius, Writer, Scientist and National Hero.</em> All-Nations Publishing Co.</li>
+      <li>Guerrero, L. M. (1998). <em>The First Filipino: A Biography of José Rizal.</em> National Historical Institute of the Philippines.</li>
+      <li>Rizal, J. (1887). <em>Noli Me Tángere.</em> Berliner Buchdruckerei-Actien-Gesellschaft, Berlin.</li>
+      <li>Rizal, J. (1891). <em>El Filibusterismo.</em> F. Meyer-van Loo Press, Ghent.</li>
+      <li>Ocampo, A. R. (1990). <em>Rizal Without the Overcoat.</em> Anvil Publishing, Inc.</li>
+      <li>National Historical Commission of the Philippines. (n.d.). <em>José Rizal.</em> Retrieved from nhcp.gov.ph</li>
+      <li>Bonoan, R. J. (1994). <em>The Rizal-Pastells Correspondence.</em> Ateneo de Manila University Press.</li>
+      <li>Craig, A. (1913). <em>Lineage, Life and Labors of José Rizal, Philippine Patriot.</em> Bureau of Printing, Manila.</li>
+      <li>Constantino, R. (1970). <em>Veneration Without Understanding.</em> Foundation for Nationalist Studies.</li>
+      <li>Schumacher, J. N. (1997). <em>The Propaganda Movement: 1880–1895.</em> Ateneo de Manila University Press.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div>Kent Zoren C. Ancla - A322</div>
+  <div style="margin-top:0.4rem">Summative Assessment · Life and Works of Rizal</div>
+</footer>
+
+<script>
+// Highlight active nav link on scroll
+const sections = document.querySelectorAll('[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
